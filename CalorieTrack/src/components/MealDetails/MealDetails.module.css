@@ -5,12 +5,13 @@ section{
     justify-content: center;
 }
 table{
-    text-align: center;
+    text-align:left;
     max-width: 450px;
 }
 th{
     font-size: 2rem;
     font-weight: 500;
+    padding: 2px 20px;
 }
 tr:hover{
     border: 1px solid wheat;
@@ -19,6 +20,10 @@ td{
     /* width: 200px; */
     padding: 2px;
     padding: 2px 20px ;
+    margin: 0;
+}
+.caloriesTableData{
+    text-align:center;
 }
 td>div{
     width: auto;

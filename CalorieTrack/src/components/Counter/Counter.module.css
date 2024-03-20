@@ -1,0 +1,34 @@
+.counter{
+    display: flex;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    padding: 20px;
+    width: 320px;
+    height: 520px;
+    border-radius: 18px;
+    background-color: rgba(56, 55, 55, 0.671);
+
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+}
+.counter>div>input{
+    padding: 8px;
+    width: 30%;
+    margin: 1em .5em;
+    font-weight: 400;
+    font-size: 1em;
+}
+.progress{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
