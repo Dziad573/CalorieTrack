@@ -1,11 +1,12 @@
 .counter{
     display: flex;
+    flex-wrap: wrap;
     position: fixed;
     bottom: 1em;
     right: 1em;
-    padding: 20px;
+    padding: 10px 20px;
     width: 320px;
-    height: 520px;
+    height: 620px;
     border-radius: 18px;
     background-color: rgba(56, 55, 55, 0.671);
 
@@ -15,20 +16,34 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    position: absolute;
-    top: 5px;
+    height: auto;
 }
-.counter>div>input{
+.inputs>input{
     padding: 8px;
-    width: 30%;
+    width: 20%;
     margin: 1em .5em;
     font-weight: 400;
     font-size: 1em;
 }
-.progress{
-    width: 300px;
+.counter>div>input:nth-child(4){
+    width: 65%;
+}
+.progressContainer{
+    position: static;
+    overflow-y: auto;
+    width: 100%;
+    height: 300px;
     display: flex;
+    flex-wrap: wrap;
+}
+.progress{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.inputsValues{
+    width: 100%;
 }

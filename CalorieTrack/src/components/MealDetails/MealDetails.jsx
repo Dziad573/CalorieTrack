@@ -1,47 +1,52 @@
+import React from 'react';
 import styles from './MealDetails.module.css';
 
-export function MealDetails({ meals, error, isShown, search }) {
+export function MealDetails({ meals, error, isShown, search, restaurant }) {
 
     const filteredMeals = meals.filter(item =>
         item.foodName.toLowerCase().includes(search.toLowerCase())
     );
-    // if (error) {
-    //    return <span className={styles.error}>{error.message}</span>;
-    // }
 
-    // if (!meals || !meals.length) {
-    //     return <span className={styles.loading}>Ładowanie...</span>;
-    // }
-    return (<>
-        {isShown ? ( 
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nazwa</th>
-                            <th>Kalorie</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredMeals.map((filteredItem, index) => (
-                            <tr key={index}>
-                                <td>{
-                                    <div> {filteredItem.foodName} 
-                                    <button className={styles.addButton}>+</button> 
-                                    </div>
-                                    }
-                                </td>
-                                <td className={styles.caloriesTableData}>
-                                    {filteredItem.calories}
-                                </td>
+
+
+    return (
+        <>
+            {isShown ? ( 
+                <section>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nazwa</th>
+                                <th>Kalorie</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </section>
-    ) : (
-        ""
-    )}
-    </>
-    )
+                        </thead>
+                        <tbody>
+                            {filteredMeals.map((filteredItem, index) => (
+                                <tr key={index}>
+                                    <td>
+                                        <span>
+                                            {filteredItem.foodName}
+                                            <button 
+                                                className={styles.addButton} 
+                                                //onClick={() => handleAddCalories(filteredItem.calories)}
+                                            >
+                                                +
+                                            </button> 
+                                        </span>
+                                        
+                                    </td>
+                                    <td>{filteredItem.calories}</td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </section>
+            ) : (
+                ""
+            )}
+        </>
+    );
 }

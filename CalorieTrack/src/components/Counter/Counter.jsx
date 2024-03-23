@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ProgressBar } from '../ProgressBar/ProgressBar.jsx';
 import styles from './Counter.module.css';
 
@@ -6,6 +6,8 @@ export function Counter({ style }) {
     const [weight, setWeight] = useState("");
     const [height, setHeight] = useState("");
     const [age, setAge] = useState("");
+    const [inputValues, setInputValues] = useState([]);
+    const [inputValue, setInputValue] = useState("");
     const [calories, setCalories] = useState(0);
 
     const calculateMaxCalories = () => {
@@ -34,11 +36,16 @@ export function Counter({ style }) {
         }
     };
 
-    const handleCaloriesChange = (e) => {
+    const handleInputChange = (e) => {
         const value = e.target.value;
-        if (!isNaN(value) && value >= 0) {
-            setCalories(value);
-        }
+        setInputValue(value);
+    };
+
+    const handleAddCalories = () => {
+        if (isNaN(parseFloat(inputValue))) return;
+        setCalories(prevCalories => prevCalories + parseFloat(inputValue));
+        setInputValues(prevInputValues => [...prevInputValues, inputValue]);
+        setInputValue("");
     };
 
     const maxDailyCalories = calculateMaxCalories();
@@ -50,7 +57,7 @@ export function Counter({ style }) {
 
     return (
         <div>
-            <section className={styles.counter}  style={style} >
+            <section className={styles.counter} style={style} >
                 <div className={styles.inputs}>
                     <input type="text" placeholder="Waga" value={weight} onChange={handleWeightChange} />
                     <input type="text" placeholder="Wzrost" value={height} onChange={handleHeightChange} />
@@ -58,17 +65,32 @@ export function Counter({ style }) {
                     <input
                         type="text"
                         placeholder="Kalorie"
-                        value={calories}
-                        onChange={handleCaloriesChange}
+                        value={inputValue}
+                        onChange={handleInputChange}
                     />
+                    <button onClick={handleAddCalories} className={styles.addButton}>+</button>
                 </div>
-                <div className={styles.progress}>
-                    <ProgressBar 
-                        percent={percent} 
-                        thickness={thickness} 
-                        maxDailyCalories={maxDailyCalories}
-                        calories={calories}
-                    />
+
+                <div className={styles.progressContainer}>
+                    <div className={styles.progress}>
+                        <ProgressBar
+                            percent={percent}
+                            thickness={thickness}
+                            maxDailyCalories={maxDailyCalories}
+                            calories={calories}
+                        />
+                    </div>
+                    <div className={styles.inputsValues}>
+                        {inputValues.map((item, index) => (
+                            <div key={index}>
+                                <span>
+                                    {item}
+                                    <button className={styles.addButton} > - </button> 
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                        
                 </div>
                 
             </section>

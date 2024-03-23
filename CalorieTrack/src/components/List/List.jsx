@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import { useGetData } from '../../hooks/useGetData'
-import { MealDetails } from '../MealDetails/MealDetails.jsx'
-import { Counter } from '../Counter/Counter.jsx'
-import styles from './List.module.css'
-import reactLogo from '../../assets/react.svg'
+import React, { useState } from 'react';
+import { useGetData } from '../../hooks/useGetData';
+import { MealDetails } from '../MealDetails/MealDetails.jsx';
+import { Counter } from '../Counter/Counter.jsx';
+import styles from './List.module.css';
+import reactLogo from '../../assets/react.svg';
+import { useParams } from 'react-router-dom';
 
 export function List() {
     const [url, setUrl] = useState(null);
@@ -16,16 +17,17 @@ export function List() {
         setSearch(e.target.value);
     };
 
-    const handleButtonClick = (url) => {
-        setUrl(url);
+    const handleButtonClick = (restaurantName) => {
+        const newUrl = `/${restaurantName.toLowerCase()}.json`;
+        setUrl(newUrl);
         setIsShown(true);
     };
 
+    const restaurant = useParams().restaurant;
 
     return (
         <>
             <div className={styles.listContainer}>
-            
                 <input 
                     type="text" 
                     placeholder='Search' 
@@ -33,16 +35,14 @@ export function List() {
                     value={search}
                     onChange={handleSearchChange}
                 />
-                <button onClick={() => handleButtonClick("/burgerKing.json")}>Burger King</button>
-                <button onClick={() => handleButtonClick("/mcDonalds.json")}>McDonald's</button>
-                <button onClick={() => handleButtonClick("/subway.json")}>Subway</button>
-            
-            
-            <MealDetails meals={meals} error={error} isShown={isShown} search={search}/>
-            <Counter/>
-            <a href="https://react.dev" target="_blank">
+                <button onClick={() => handleButtonClick("burgerking")}>Burger King</button>
+                <button onClick={() => handleButtonClick("mcdonalds")}>McDonald's</button>
+                <button onClick={() => handleButtonClick("subway")}>Subway</button>
+                <MealDetails meals={meals} error={error} isShown={isShown} search={search} restaurant={restaurant}/>
+                <Counter />
+                <a href="https://react.dev" target="_blank">
                     <img src={reactLogo} className={`${styles.logo} ${styles.react}`} alt="React logo" />
-            </a>
+                </a>
             </div>
         </>
     );
