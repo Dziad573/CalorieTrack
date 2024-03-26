@@ -2,12 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 200px;
-    padding: 15px 5px;
+    height: 80px;
+    padding: 10px;
     border: 1px solid #646cff;
     border-radius: 8px;
 }
 .progressBar{
-    height: 20px;
+    height: 15px;
     border-radius: 5px;
     background-color: #646cff;
 }
