@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     padding: 10px 20px;
-    width: 200px auto 400px;
+    min-width: 200px;
+    max-width: 900px;
     height: 620px;
     border-radius: 18px;
     background-color: rgba(56, 55, 55, 0.671);
@@ -13,14 +14,18 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    height: auto;
 }
-.inputs>input{
+.inputs>div>input{
     padding: 8px;
-    width: 25%;
-    margin: 1em .5em;
+    width: 12em;
+    max-width: 15em;
+    margin: .5em;
     font-weight: 400;
     font-size: 1em;
+    border: 1px solid rgba(170, 170, 170, 0.87);
+}
+.inputs>div>input:hover{
+    border-color: #646cff;
 }
 .counter>div>input:nth-child(4){
     width: 65%;
@@ -40,4 +45,16 @@
 }
 .selectedButton{
     border-color: #646cff;
+}
+select{
+    padding: 8px;
+    width: 25%;
+    min-width: 184px;
+    margin: 1em .5em;
+    font-weight: 400;
+    font-size: 1em;
+}
+.icon{
+    width: 3em;
+    height: 3em;
 }
