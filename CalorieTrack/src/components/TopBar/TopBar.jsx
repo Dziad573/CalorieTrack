@@ -12,14 +12,14 @@ export function TopBar({ dispatch }){
     const handleButtonOpenListClick = () => {
         dispatch({ type: 'open_list' });
     };
-    
+
     return (
         <>
             <div className={styles.topBar}>
                 <a href="https://react.dev" target="_blank">
                     <img src={reactLogo} className={`${styles.logo} ${styles.react}`} alt="React logo" />
                 </a>
-                <button onClick={handleButtonOpenHomePageClick}>
+                <button onClick={handleButtonOpenHomePageClick} className="topBar"> 
                     Główna
                 </button>
                 <button onClick={handleButtonOpenFormClick}>

@@ -29,8 +29,6 @@ export function MainCounter({ style }) {
 
         if (includeTraining) {
             maxCalories *= 1.2;
-        }
-        if (includeTraining) {
             text = "Twoje dzienne zapotrzebowanie wraz z treningiem to: ";
         }
         if (goal === "=") {
@@ -120,7 +118,7 @@ export function MainCounter({ style }) {
                 <div className={styles.infoContainer}>
                     <div className={styles.infoDaily}>
                         <div>
-                            {weight && height && age && gender ? (
+                            {weight > 0 && height > 0 && age <=150 && gender ? (
                                 <>
                                     <div>
                                         <img src={foodIcon} className={styles.icon} alt="Food Icon" />
