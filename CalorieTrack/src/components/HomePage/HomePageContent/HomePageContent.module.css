@@ -6,6 +6,17 @@
     flex-direction: row;
     justify-content: center;
 }
+.elementLeft{
+    display: flex;
+    justify-content: left;
+    margin: 1em;
+
+}
+.elementRight{
+    display: flex;
+    justify-content: right;
+    margin: 1em;
+}
 p{
     display: flex;
     align-items: center;
@@ -13,4 +24,7 @@ p{
     font-weight: 600;
     width: 60%;
     margin: 2em;
+}
+.img{
+    border-radius: 2em;
 }

@@ -23,8 +23,8 @@ function App() {
         isFormShown={state.isFormShown} 
         isListShown={state.isListShown}
       />
-      <div>
-        { state.isHomePageShown ? (
+      <div className='content'>
+          { state.isHomePageShown ? (
           <HomePage/>
         ) : state.isFormShown ? (
           <Form/>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useGetData } from '../../hooks/useGetData';
 import { MealDetails } from '../MealDetails/MealDetails.jsx';
 import { Counter } from '../Counter/Counter.jsx';

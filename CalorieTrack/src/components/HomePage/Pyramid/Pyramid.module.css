@@ -1,0 +1,31 @@
+.pyramidContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em;
+}
+.pyramidElement{
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: left;
+    margin-top: 4em;
+}
+.typeOfFood{
+    width: 100%;
+    justify-content: left;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+.icon{
+    width: 4em;
+    height: 4em;
+}
+.img{
+    border-radius: 2em;
+}
+.info{
+    width: 100%;
+}
+.description{
+    text-align: left;
+}
