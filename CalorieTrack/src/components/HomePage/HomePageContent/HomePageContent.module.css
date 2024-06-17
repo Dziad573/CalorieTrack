@@ -2,29 +2,57 @@
     overflow-x: hidden;
 }
 .container{
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
-.elementLeft{
+.containerElement{
+    width: 100%;
     display: flex;
-    justify-content: left;
-    margin: 1em;
+    flex-direction: row;
+    max-width: 1500px;
 
 }
-.elementRight{
+.elementLeft, .elementRight{
     display: flex;
-    justify-content: right;
     margin: 1em;
+    padding: 4em 0 4em 0;
+    max-width: 1160px;
 }
-p{
+.elementLeft{
+    justify-content: left;
+}
+.elementRight{
+    justify-content: right;
+}
+.homePageContent{
+    background-color: rgba(44, 44, 44, 0.671);
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
     text-align: center;
-    font-weight: 600;
-    width: 60%;
-    margin: 2em;
-}
-.img{
+    width: 100%;
+    padding: 20px;
+    border: 2px solid black;
     border-radius: 2em;
 }
+.containerElement>img{
+    position: relative;
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 2em;
+    margin: 0 1em 0 1em;
+}
+/* .containerElement>img:nth-child(1)::after{
+    content: "CalorieTrack";
+    position: absolute;
+    top:0;
+    left: 0;
+    font-size: 2em;
+    font-weight: 800;
+    display: block;
+    margin: 1em;
+    z-index: 2;
+
+} */

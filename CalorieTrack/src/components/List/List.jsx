@@ -35,9 +35,11 @@ export function List() {
                     value={search}
                     onChange={handleSearchChange}
                 />
+                
                 <button onClick={() => handleButtonClick("burgerking")}>Burger King</button>
                 <button onClick={() => handleButtonClick("mcdonalds")}>McDonald's</button>
                 <button onClick={() => handleButtonClick("subway")}>Subway</button>
+                
                 <MealDetails meals={meals} error={error} isShown={isShown} search={search} restaurant={restaurant}/>
                 <Counter />
                 <a href="https://react.dev" target="_blank">

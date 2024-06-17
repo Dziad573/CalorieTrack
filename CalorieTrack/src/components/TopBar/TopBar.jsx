@@ -1,5 +1,6 @@
 import styles from "./TopBar.module.css"
 import reactLogo from '../../assets/react.svg'
+import { Link } from "react-router-dom";
 
 export function TopBar({ dispatch }){
     
@@ -15,19 +16,28 @@ export function TopBar({ dispatch }){
 
     return (
         <>
-            <div className={styles.topBar}>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className={`${styles.logo} ${styles.react}`} alt="React logo" />
-                </a>
-                <button onClick={handleButtonOpenHomePageClick} className="topBar"> 
-                    Główna
-                </button>
-                <button onClick={handleButtonOpenFormClick}>
-                    Dodaj
-                </button>
-                <button onClick={handleButtonOpenListClick}>
-                    Lista
-                </button>
+            <div className={styles.topBarContainer}>
+                <div className={styles.topBar}>
+                    <a href="https://react.dev" target="_blank">
+                        <img src={reactLogo} className={`${styles.logo} ${styles.react}`} alt="React logo" />
+                    </a>
+                    <Link to="/">
+                        <button onClick={handleButtonOpenHomePageClick} className="topBar"> 
+                            Główna
+                        </button>
+                    </Link>
+                    
+                    <Link to="/kalkulator">
+                        <button onClick={handleButtonOpenFormClick}>
+                            Dodaj
+                        </button>
+                    </Link>
+                    <Link to="/lista">
+                        <button onClick={handleButtonOpenListClick}>
+                            Lista
+                        </button>
+                    </Link>
+                </div>
             </div>
         </>
     )
