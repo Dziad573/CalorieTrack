@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ProgressBar } from '../ProgressBar/ProgressBar.jsx';
 import styles from './Counter.module.css';
 
-export function Counter({ style }) {
+export function Counter({ caloriesAdd, style }) {
     const [weight, setWeight] = useState("");
     const [height, setHeight] = useState("");
     const [age, setAge] = useState("");
     const [inputValues, setInputValues] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const [calories, setCalories] = useState(0);
+
+    useEffect(() => {
+        if (!isNaN(caloriesAdd) && caloriesAdd !== null) {
+            setCalories(prevCalories => prevCalories + parseFloat(caloriesAdd));
+            setInputValues(prevInputValues => [...prevInputValues, caloriesAdd.toString()]);
+        }
+    }, [caloriesAdd]);
 
     const calculateMaxCalories = () => {
         const ppm = 10 * weight + 6.25 * height + 5 * age + 5;
@@ -48,6 +55,14 @@ export function Counter({ style }) {
         setInputValue("");
     };
 
+    const handleRemoveCalories = (index) => {
+        const valueToRemove = parseFloat(inputValues[index]);
+        if (!isNaN(valueToRemove)) {
+            setCalories(prevCalories => prevCalories - valueToRemove);
+            setInputValues(prevInputValues => prevInputValues.filter((_, i) => i !== index));
+        }
+    };
+
     const maxDailyCalories = calculateMaxCalories();
     const percent = ((calories / maxDailyCalories) * 100);
 
@@ -57,7 +72,7 @@ export function Counter({ style }) {
 
     return (
         <div>
-            <section className={styles.counter} style={style} >
+            <section className={styles.counter} style={style}>
                 <div className={styles.inputs}>
                     <input type="text" placeholder="Waga" value={weight} onChange={handleWeightChange} />
                     <input type="text" placeholder="Wzrost" value={height} onChange={handleHeightChange} />
@@ -85,14 +100,17 @@ export function Counter({ style }) {
                             <div key={index}>
                                 <span>
                                     {item}
-                                    <button className={styles.addButton} > - </button> 
+                                    <button 
+                                        className={styles.addButton} 
+                                        onClick={() => handleRemoveCalories(index)}
+                                    >
+                                        -
+                                    </button> 
                                 </span>
                             </div>
                         ))}
                     </div>
-                        
                 </div>
-                
             </section>
         </div>
     );

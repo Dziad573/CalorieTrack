@@ -13,7 +13,6 @@
     flex-direction: row;
     align-items: center;
     place-content: center;
-    /* background-color: black; */
     color: aliceblue;
 }
 .logo {

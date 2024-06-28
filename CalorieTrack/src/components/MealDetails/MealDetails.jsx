@@ -1,17 +1,14 @@
 import React from 'react';
 import styles from './MealDetails.module.css';
 
-export function MealDetails({ meals, error, isShown, search, restaurant }) {
-
+export function MealDetails({ meals, error, isShown, search, restaurant, onMealSelect }) {
     const filteredMeals = meals.filter(item =>
         item.foodName.toLowerCase().includes(search.toLowerCase())
     );
 
-
-
     return (
         <>
-            {isShown ? ( 
+            {isShown ? (
                 <section>
                     <table>
                         <thead>
@@ -23,21 +20,19 @@ export function MealDetails({ meals, error, isShown, search, restaurant }) {
                         <tbody>
                             {filteredMeals.map((filteredItem, index) => (
                                 <tr key={index}>
-                                    <td>
+                                    <td className={styles.foodName}>
                                         <span>
-                                            {filteredItem.foodName}
                                             <button 
                                                 className={styles.addButton} 
-                                                //onClick={() => handleAddCalories(filteredItem.calories)}
+                                                onClick={() => onMealSelect(filteredItem.calories)}
                                             >
                                                 +
                                             </button> 
+                                            {filteredItem.foodName}
                                         </span>
-                                        
                                     </td>
-                                    <td>{filteredItem.calories}</td>
-                                    <td>
-                                        
+                                    <td className={styles.calories}>
+                                        {filteredItem.calories + " kcal"}
                                     </td>
                                 </tr>
                             ))}

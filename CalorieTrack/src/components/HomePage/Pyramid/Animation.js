@@ -13,7 +13,7 @@ export function runAnimations() {
                 scrollTrigger: {
                     trigger: element,
                     start: "top 60%",
-                    markers: false,
+                    //markers: false,
                     scrub: false
                 }});
             });
@@ -30,7 +30,7 @@ export function runAnimations() {
                 scrollTrigger: {
                     trigger: element,
                     start: "top 90%",
-                    markers: true,
+                    //markers: true,
                     scrub: false
                 }});
             });
