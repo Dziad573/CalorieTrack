@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useGetData } from '../../hooks/useGetData';
 import { MealDetails } from '../MealDetails/MealDetails.jsx';
 import { Counter } from '../Counter/Counter.jsx';
@@ -53,7 +53,6 @@ export function List() {
 
         window.addEventListener('resize', handleResize);
 
-        // Cleanup event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
         };

@@ -27,14 +27,14 @@ export function TopBar({ dispatch }){
                         </button>
                     </Link>
                     
-                    <Link to="/kalkulator">
+                    {/* <Link to="/kalkulator">
                         <button onClick={handleButtonOpenFormClick}>
                             Dodaj
                         </button>
-                    </Link>
+                    </Link> */}
                     <Link to="/lista">
                         <button onClick={handleButtonOpenListClick}>
-                            Lista
+                            Fastfood
                         </button>
                     </Link>
                 </div>

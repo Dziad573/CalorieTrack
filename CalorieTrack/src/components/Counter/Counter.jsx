@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ProgressBar } from '../ProgressBar/ProgressBar.jsx';
 import styles from './Counter.module.css';
 
@@ -9,6 +9,7 @@ export function Counter({ caloriesAdd, style }) {
     const [inputValues, setInputValues] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const [calories, setCalories] = useState(0);
+
 
     useEffect(() => {
         if (!isNaN(caloriesAdd) && caloriesAdd !== null) {
@@ -74,7 +75,7 @@ export function Counter({ caloriesAdd, style }) {
         <div>
             <section className={styles.counter} style={style}>
                 <div className={styles.inputs}>
-                    <input type="text" placeholder="Waga" value={weight} onChange={handleWeightChange} />
+                    <input type="text" placeholder="Waga" value={weight} onChange={handleWeightChange}/>
                     <input type="text" placeholder="Wzrost" value={height} onChange={handleHeightChange} />
                     <input type="text" placeholder="Wiek" value={age} onChange={handleAgeChange} />
                     <input

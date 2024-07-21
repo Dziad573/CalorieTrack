@@ -10,7 +10,7 @@ import { TopBar } from './components/TopBar/TopBar.jsx';
 
 const router = createBrowserRouter([
   {
-    element: <App></App>,
+    element: <App/>,
     path: '/',
     children: [
       { }
@@ -19,15 +19,15 @@ const router = createBrowserRouter([
     path: "/kalkulator",
         element: 
         <>
-          <TopBar></TopBar>
-          <Form></Form>
-        </>
+          <TopBar/>
+          <Form/>
+        </>,
   },{
     path: "/lista",
         element: 
         <>
-          <TopBar></TopBar>
-          <List></List>
+          <TopBar/>
+          <List/>
         </>,
   }
   
