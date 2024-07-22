@@ -4,10 +4,10 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ContentComponent } from '../ContentComponent/ContentComponent.jsx';
 import styles from './HomePageContent.module.css';
-import firstImg from '../../../assets/firstImg.png';
-import secondImg from '../../../assets/secondImg.png';
-import thirdImg from '../../../assets/thirdImg.png';
-import fourthImg from '../../../assets/fourthImg.png';
+import firstImg from '../../../assets/firstImg1.png';
+import secondImg from '../../../assets/secondImg1.png';
+import thirdImg from '../../../assets/thirdImg1.png';
+import fourthImg from '../../../assets/fourthImg1.png';
 
 gsap.registerPlugin(ScrollTrigger);
 

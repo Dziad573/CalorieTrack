@@ -1,0 +1,19 @@
+[      
+        {"foodName":"Bacon Egg and Cheese Bagel", "calories":552, "breakfastItem":true },
+        {"foodName":"Big Breakfast", "calories":750, "foodType":"Breakfast", "breakfastItem":true },
+        {"foodName":"Big Breakfast with Hotcakes", "calories":1350},
+        {"foodName":"Hotcakes", "calories":600, "breakfastItem":true },
+        {"foodName":"Hotcakes and Sausage", "calories":790, "breakfastItem":true },
+        {"foodName":"Sausage Burrito", "calories":290, "foodType":"Breakfast", "breakfastItem":true },
+        {"foodName":"Hash Brown", "calories":151, "sideItem":true },
+        {"foodName":"Double Cheeseburger", "calories":430 },
+        {"foodName":"Triple Cheeseburger", "calories":520 },
+        {"foodName":"Double Quarter Pounder with Cheese", "foodType":"Burger", "calories":770},
+        {"foodName":"Double Quarter Pounder", "calories":778},
+        {"foodName":"Filet-o-Fish Sandwich", "calories":391},
+        {"foodName":"Buttermilk Crispy Tenders", "calories":490},
+        {"foodName":"Four Piece Chicken Tenders", "calories":490 },
+        {"foodName":"6 Piece Crispy Tenders", "calories":730},
+        {"foodName":"10 Piece Buttermilk Crispy Tenders", "foodType":"Chicken Tenders", "calories":1210},
+        {"foodName":"10 Piece Crispy Tenders", "calories":1210}
+]

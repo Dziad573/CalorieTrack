@@ -101,11 +101,11 @@ export function List() {
                     restaurant={restaurant}
                     onMealSelect={handleMealSelect}
                 />
-                {selectedCalories !== null && (
+                {/* {selectedCalories !== null && (
                     <div>
                         <h2>Selected Calories: {selectedCalories}</h2>
                     </div>
-                )}
+                )} */}
                 {screenWidth > 1360 ? <Counter caloriesAdd={selectedCalories} /> : null}
             </div>
         </>

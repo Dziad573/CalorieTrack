@@ -1,0 +1,21 @@
+[        
+        {"foodName":"Italian Hero", "calories":550},
+        {"foodName":"Footlong Italian Hero", "calories":1100},
+        {"foodName":"Black Forest Ham Salad", "calories":110, "sideItem":true, "dressingItem":true },
+        {"foodName":"Oven Roasted Chicken Salad", "calories":150, "sideItem":true, "dressingItem":true },
+        {"foodName":"Roast Beef Salad", "foodType":"Salad", "calories":142, "sideItem":true, "dressingItem":true },
+        {"foodName":"Rotisserie Chicken Salad", "foodType":"Salad", "calories":170, "sideItem":true, "dressingItem":true },
+        {"foodName":"Subway Club Salad", "calories":140, "sideItem":true, "dressingItem":true },
+        {"foodName":"Sweet Onion Chicken Teriyaki Salad", "calories":234, "sideItem":true, "dressingItem":true },
+        {"foodName":"Turkey Breast Salad", "foodType":"Salad", "calories":111, "sideItem":true, "dressingItem":true },
+        {"foodName":"Veggie Delite Salad", "foodType":"Salad", "calories":60, "sideItem":true, "dressingItem":true },
+        {"foodName":"Bacon, Egg & Cheese Sandwich", "calories":464},
+        {"foodName":"Ham, Egg & Cheese Sandwich", "calories":411},
+        {"foodName":"Black Forest Ham, Egg & Cheese Sandwich", "calories":410},
+        {"foodName":"Egg & Cheese Sandwich", "calories":380},
+        {"foodName":"Steak, Egg & Cheese Sandwich", "calories":450},
+        {"foodName":"Salt and Vinegar Chips", "calories":230, "sideItem":true },
+        {"foodName":"Baked Barbeque Chips", "calories":131, "sideItem":true },
+        {"foodName":"Apple Slices", "calories":35, "sideItem":true },
+        {"foodName":"Potato Chips", "calories":160, "sideItem":true}
+]

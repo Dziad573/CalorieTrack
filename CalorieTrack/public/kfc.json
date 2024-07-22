@@ -1,0 +1,12 @@
+[       
+        {"foodName":"Grilled Chicken Sandwich","calories":470 },
+        {"foodName":"Crispy Chicken Sandwich","calories":670 },
+        {"foodName":"Chicken Sandwich","calories":660 },
+        {"foodName":"Original Chicken Sandwich","calories":668 },
+        {"foodName":"Chicken Tendercrisp", "calories":640 },
+        {"foodName":"Chicken Junior", "calories":450},
+        {"foodName":"Spicy Chicken Junior", "calories":390 },
+        {"foodName":"Snickers Pie", "calories":300, "sideItem":true},
+        {"foodName":"Pie made with Snickers", "calories":300, "sideItem":true},
+        {"foodName":"Apple Pie", "calories":340, "sideItem":true}
+]
